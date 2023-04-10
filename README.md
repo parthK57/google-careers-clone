@@ -91,3 +91,32 @@ describe("basic math", () => {
 ```
 
 _Tip: Install **@vitest/coverage-c8** for generating code coverage report of the tests!_
+
+#### v-bind
+
+Connects html-attribute to a dynaminc data. Syntax:-
+
+```html
+<template>
+  <header class="w-full text-sm">
+    <div class="fixed left-0 top-0 h-16 w-full bg-white">
+      <div class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8">
+        <!-- V BIND on href -->
+        <a class="flex h-full items-center text-xl" :href="url">{{ company }}</a>
+      </div>
+    </div>
+  </header>
+</template>
+
+<script>
+  export default {
+    name: "MainNav",
+    data() {
+      return {
+        company: "Google Careers",
+        url: "https://careers.google.com",
+      };
+    },
+  };
+</script>
+```
