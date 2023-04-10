@@ -41,4 +41,9 @@ Starting vue with composition api.
 </script>
 ```
 
-Every component present inside the vue project must have a default export object like the one specified above .In this method, you need to register the imported components under the components property else vue won't allow you to use that component inside the template.
+Every component present inside the vue project must have a default export object like the one specified above. In this method, you need to register the imported components under the components property else vue won't allow you to use that component inside the template.
+
+### Unit Testing
+
+It is a process where a component is tested individual and independently to checkout it's performance.
+Every test file must end with '**_.test.js_**'.
