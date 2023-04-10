@@ -120,3 +120,27 @@ Connects html-attribute to a dynaminc data. Syntax:-
   };
 </script>
 ```
+
+#### v-for
+
+Runs a forloop on an element, just like map in react. Syntax:-
+
+```html
+<div v-for="car in garage" :key="car">{{ car }}</div>
+```
+
+#### v-if, v-else-if, v-else
+
+Conditional rendering of the template element. Syntax:-
+
+```html
+<button v-if="true">Sign In</button>
+```
+
+#### v-on:"event"
+
+Event based logic. Syntax:-
+
+```html
+<button v-if="true" v-on="handleClick">Sign In</button>
+```

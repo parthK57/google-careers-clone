@@ -10,17 +10,29 @@
             </li>
           </ul>
         </nav>
+        <div class="ml-auto flex h-full items-center">
+          <ActionButton v-if="!isLoggedIn" @:click="handleClick" />
+          <ProfileImage v-else />
+        </div>
       </div>
     </div>
   </header>
 </template>
 
 <script>
+import ActionButton from "./ActionButton.vue";
+import ProfileImage from "./ProfileImage.vue";
+
 export default {
   name: "MainNav",
+  components: {
+    ActionButton,
+    ProfileImage,
+  },
   data() {
     return {
       company: "Google Careers",
+      isLoggedIn: false,
       url: "https://careers.google.com",
       menuItems: [
         "Teams",
@@ -31,6 +43,11 @@ export default {
         "Jobs",
       ],
     };
+  },
+  methods: {
+    handleClick() {
+      this.isLoggedIn = !this.isLoggedIn;
+    },
   },
 };
 </script>
