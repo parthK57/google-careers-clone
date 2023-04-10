@@ -45,5 +45,49 @@ Every component present inside the vue project must have a default export object
 
 ### Unit Testing
 
-It is a process where a component is tested individual and independently to checkout it's performance.
-Every test file must end with '**_.test.js_**'.
+It is a process where a component is tested individually and independently to checkout it's performance. Every test file must end with '**_.test.js_**'.
+
+##### Vitest
+
+It is a JS testing library.
+
+##### Describe
+
+It is a function to organize your tests into categories.
+
+##### It
+
+It is a function to declare the logic you are testing.
+
+##### Expect
+
+Here is were the assertion takes place.
+
+Example-
+
+```js
+// File: Playground.test.js
+import { describe, it, expect } from "vitest";
+
+// Name of the component to be tested
+describe("basic math", () => {
+  // What is being tested
+  it("adds two numbers", () => {
+    // Actual test
+    expect(1 + 1).toBe(2);
+  });
+
+  // Checks the evenOrOdd func
+  describe("evenOrOdd", () => {
+    // Checks whether num is E or O
+    it("checks even or odd", () => {
+      // Testing Odd Case
+      expect(evenOrOdd(3)).toBe("Odd");
+      // Testing Even Case
+      expect(evenOrOdd(2)).toBe("Even");
+    });
+  });
+});
+```
+
+_Tip: Install **@vitest/coverage-c8** for generating code coverage report of the tests!_
