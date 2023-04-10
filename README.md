@@ -1,41 +1,17 @@
-# google-careers
+# Vue JS - Notes
 
-This template should help get you started developing with Vue 3 in Vite.
+A vue file consist of three parts:-
+- Template
+- Script
+- Style
 
-## Recommended IDE Setup
+##### Template
+This will contain all the html stuff which is meant to rendered by the file. Any dynamic JS can be injected with the help of curly brackets {}.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+##### Script
+Place where one can write js.
 
-## Customize configuration
+##### Style
+Here we can write normal css in this tag. If we specify *scoped* as an attribute to this tag, the css will be limited to this file only and will not leak out and affect other files.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+*Tip:- Install a dev dependency called as **prettier-plugin-tailwindcss** for systematic arrangement of the utility classes!* 
