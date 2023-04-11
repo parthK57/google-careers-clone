@@ -144,3 +144,31 @@ Event based logic. Syntax:-
 ```html
 <button v-if="true" v-on="handleClick">Sign In</button>
 ```
+
+#### Props
+
+Just like react you can pass props in vue too, they are nothing but a value passed by the parent component. Syntax:-
+
+```html
+<!-- Parent Component -->
+<div class="ml-auto flex h-full items-center">
+  <ActionButton v-if="!isLoggedIn" text="Sign In" @:click="handleClick" />
+  <ProfileImage v-else />
+</div>
+
+<!-- Child Component -->
+<template>
+  <button
+    class="rounded border-0 bg-brand-blue-1 px-4 py-2.5 font-medium text-white hover:shadow-blue"
+  >
+    {{ text }}
+  </button>
+</template>
+
+<script>
+  export default {
+    name: "ActionButton",
+    props: ["text"], // Props are supposed to be listed in an array
+  };
+</script>
+```

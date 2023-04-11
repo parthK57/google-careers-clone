@@ -11,7 +11,7 @@
           </ul>
         </nav>
         <div class="ml-auto flex h-full items-center">
-          <ActionButton v-if="!isLoggedIn" @:click="handleClick" />
+          <ActionButton v-if="!isLoggedIn" text="Sign In" @:click="handleClick" />
           <ProfileImage v-else />
         </div>
       </div>
